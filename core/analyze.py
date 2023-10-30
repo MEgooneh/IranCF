@@ -20,4 +20,4 @@ for handle in handles :
 srt = dict(sorted(problems.items(), key=lambda x : x[1] , reverse=True))
 print(srt)
 with open('table.json', 'w') as f:
-    json.dump(srt, f)
+    json.dump(srt, f, indent=4)
