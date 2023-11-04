@@ -6006,8 +6006,7 @@ let currentPage = 1;
 
 function updateTable(page) {
     const tableBody = document.getElementById("tbody");
-    //tableBody.innerHTML = "";
-
+    tableBody.innerHTML = "";
     const startIndex = (page - 1) * rowsPerPage;
     const endIndex = startIndex + rowsPerPage;
     for (let i = startIndex; i < endIndex; i++) {
@@ -6039,7 +6038,7 @@ function updateTable(page) {
 
 function updatePagination() {
     const pagination = document.getElementById("pagination");
-    //pagination.innerHTML = "";
+    pagination.innerHTML = "";
 
     const numPages = Math.ceil(problems.length / rowsPerPage);
     for (let i = 1; i <= numPages; i++) {
@@ -6055,6 +6054,5 @@ function updatePagination() {
     }
 }
 
-// Initial setup
 updateTable(currentPage);
 updatePagination();
